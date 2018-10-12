@@ -22,7 +22,7 @@ public:
     long long trailingZeros(long long n) {
         // write your code here, try to do it without arithmetic operators.
         long long sum = 0;
-        long long t=5;
+        long long t = 5;
         while(t<=n){
             sum += n/t;
             t = 5*t;
@@ -40,3 +40,4 @@ public:
 但是很显然这种方法的复杂度会随着N值的变大而激剧变大，**故显然不是最优解**
 
 重新分析题目，可从数学角度来再次查看，尾部为**0**的个数，而产生**0**后缀总是由**质因子2**和**质因子5**相乘得来的，又可明显得到2的数量多于5的数量，所以，**这个问题就变成了有多少个5的问题**。
+
